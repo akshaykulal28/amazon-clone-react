@@ -1,0 +1,194 @@
+/* Amazon-Style Banner Component Styles */
+
+/* Main Banner Carousel */
+.banner-carousel {
+  position: relative;
+  background-color: #232f3e;
+}
+
+.banner-carousel .btn {
+  transition: all 0.3s ease;
+}
+
+.banner-carousel .btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* Navigation Arrows */
+.banner-carousel .btn-light {
+  background-color: rgba(255, 255, 255, 0.9);
+  border: none;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner-carousel .btn-light:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+/* Slide Indicators */
+.banner-carousel .btn-warning {
+  background-color: #ff9900;
+  border-color: #ff9900;
+}
+
+.banner-carousel .btn-outline-light {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Content Cards Section */
+.card {
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1) !important;
+}
+
+/* Card Headers */
+.card-header {
+  border-bottom: 1px solid #e7e7e7;
+}
+
+/* Amazon Business Card */
+.card[style*="linear-gradient"] .btn-light {
+  background-color: white;
+  color: #232f3e;
+  font-weight: 600;
+}
+
+.card[style*="linear-gradient"] .btn-light:hover {
+  background-color: #f8f9fa;
+  transform: translateY(-1px);
+}
+
+/* Product Images */
+.card-body img {
+  transition: all 0.3s ease;
+  border: 1px solid #e7e7e7;
+}
+
+.card-body img:hover {
+  transform: scale(1.05);
+  border-color: #ff9900;
+}
+
+/* Links */
+.text-primary {
+  color: #0066c0 !important;
+  font-weight: 500;
+}
+
+.text-primary:hover {
+  color: #ff9900 !important;
+  text-decoration: underline !important;
+}
+
+/* Amazon Brand Colors */
+.btn-warning {
+  background-color: #ff9900;
+  border-color: #ff9900;
+  color: #000;
+  font-weight: bold;
+}
+
+.btn-warning:hover {
+  background-color: #e88900;
+  border-color: #e88900;
+  color: #000;
+}
+
+/* Background Colors */
+.bg-danger {
+  background-color: #d13212 !important;
+}
+
+.bg-primary {
+  background-color: #0066c0 !important;
+}
+
+.badge {
+  font-weight: 600;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .banner-carousel {
+    height: 300px !important;
+  }
+  
+  .banner-carousel .display-4 {
+    font-size: 1.5rem !important;
+  }
+  
+  .banner-carousel .lead {
+    font-size: 1rem !important;
+  }
+  
+  .banner-carousel .btn-lg {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .card-body {
+    padding: 1rem !important;
+  }
+  
+  .card-header {
+    padding: 0.75rem 1rem !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .banner-carousel {
+    height: 250px !important;
+  }
+  
+  .container-fluid {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .d-flex.gap-3 {
+    flex-direction: column;
+    gap: 0.5rem !important;
+  }
+  
+  .badge {
+    font-size: 0.7rem;
+    padding: 0.25rem 0.5rem;
+  }
+}
+
+/* Animation for auto-sliding carousel */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.banner-carousel .position-absolute {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Loading states */
+.banner-carousel img {
+  transition: opacity 0.3s ease;
+}
+
+.banner-carousel img[src=""] {
+  opacity: 0;
+}
+
+/* Performance optimizations */
+.banner-carousel {
+  will-change: transform;
+}
+
+.card {
+  will-change: transform;
+}
